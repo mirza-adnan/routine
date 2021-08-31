@@ -40,25 +40,24 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.7rem, 2.5vw, 1.1rem);
 }
 
 .logo-container {
     color: var(--clr-accent);
 }
 
-.logo {
-}
-
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .grid {
     width: 95%;
     max-width: 1000px;
+    min-width: 342px;
     margin: 1rem 0;
     display: grid;
     grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
