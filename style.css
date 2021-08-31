@@ -4,7 +4,7 @@
     --clr-bg: #3b363f;
     --clr-text: #eedaea;
     --clr-accent: #fc6e83;
-    --clr-sub: #d6785c;
+    --clr-sub: #fcd783;
     --line-len: 3px;
 }
 
@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 
 .line {
     background-color: var(--clr-sub);
-    border-radius: 5px;
+    border-radius: 50px;
     animation: extend 900ms ease-in-out forwards 100ms;
     transform: scale(0);
     transform-origin: center;
