@@ -1,4 +1,4 @@
-const time = document.querySelector(".date");
+const date = document.querySelector(".date");
 
 const months = [
     "January",
@@ -28,7 +28,7 @@ let today = new Date();
 
 let day = days[today.getDay()];
 let month = months[today.getMonth()];
-let date = String(today.getDate());
+let currDate = String(today.getDate());
 let year = String(today.getFullYear());
 
-time.textContent = `${day}, ${month} ${date}, ${year}`;
+date.textContent = `${day}, ${month} ${currDate}, ${year}`;
