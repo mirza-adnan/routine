@@ -107,7 +107,7 @@ body::-webkit-scrollbar-thumb {
 .line {
     background-color: var(--clr-sub);
     border-radius: 5px;
-    animation: extend 900ms ease-in-out forwards;
+    animation: extend 900ms ease-in-out forwards 100ms;
     transform: scale(0);
     transform-origin: center;
 }
@@ -179,5 +179,9 @@ body::-webkit-scrollbar-thumb {
 
     :root {
         --line-len: 1px;
+    }
+
+    .header {
+        padding: 2rem;
     }
 }
