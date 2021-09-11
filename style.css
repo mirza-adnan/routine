@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
 
 .main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: auto;
@@ -59,12 +60,8 @@ body::-webkit-scrollbar-thumb {
     max-width: 1000px;
     min-width: 342px;
     margin: 1rem 0;
-    display: grid;
-    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
-            3,
-            1fr
-        );
-    grid-template-rows: 100px var(--line-len) repeat(6, 100px);
+    display: none;
+    grid-template-rows: 95px var(--line-len) repeat(6, 95px);
     opacity: 0;
     animation: fade-in 1s ease-in forwards;
     box-shadow: rgb(0 0 0 / 20%) 0px 4px 15px 0px;
@@ -73,22 +70,40 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(0.6rem, 2.7vw, 1.2rem);
 }
 
+.grid.active {
+    display: grid;
+}
+
+.offline-grid {
+    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
+            2,
+            1fr
+        );
+}
+
+.online-grid {
+    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
+            3,
+            1fr
+        );
+}
+
 .grid-cell {
     justify-self: center;
     align-self: center;
     text-align: center;
     padding: 0 0.5rem;
-    font-weight: 500;
 }
 
 .head {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--clr-accent);
 }
 
 .link {
     text-decoration: none;
     color: var(--clr-text);
+    font-weight: 500;
     background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
     background-size: 200%;
     background-clip: text;
@@ -133,6 +148,39 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
 }
 
+.buttons {
+    display: flex;
+    width: 60%;
+    max-width: 300px;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--clr-text);
+    font-family: "Montserrat", sans-serif;
+    width: 50%;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 300ms ease;
+}
+
+.offline-btn.active {
+    border-bottom: 2px solid var(--clr-accent);
+    border-right: 2px solid var(--clr-accent);
+    box-shadow: inset rgb(0 0 0 / 20%) 0px 4px 10px 0px;
+    color: var(--clr-accent);
+}
+
+.online-btn.active {
+    border-bottom: 2px solid var(--clr-accent);
+    border-left: 2px solid var(--clr-accent);
+    box-shadow: inset rgb(0 0 0 / 20%) 0px 4px 10px 0px;
+    color: var(--clr-accent);
+}
+
 @keyframes extend {
     0% {
         transform: scale(0);
@@ -168,7 +216,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 540px) {
-    .grid {
+    .online-grid {
         grid-template-rows: 70px var(--line-len) repeat(6, 70px);
         padding: 0.5rem;
     }
