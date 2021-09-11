@@ -216,7 +216,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 540px) {
-    .online-grid {
+    .grid {
         grid-template-rows: 70px var(--line-len) repeat(6, 70px);
         padding: 0.5rem;
     }
