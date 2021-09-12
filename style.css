@@ -164,6 +164,7 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(0.9rem, 2.5vw, 1.3rem);
     padding: 0.5rem;
     cursor: pointer;
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 10px 0px;
     transition: color 300ms ease;
 }
 
