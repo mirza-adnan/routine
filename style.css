@@ -95,9 +95,18 @@ body::-webkit-scrollbar-thumb {
     padding: 0 0.5rem;
 }
 
+.grid-cell.active {
+    color: var(--clr-accent);
+}
+
 .head {
     font-weight: 500;
     color: var(--clr-accent);
+}
+
+.day {
+    font-weight: 500;
+    color: var(--clr-text);
 }
 
 .link {
