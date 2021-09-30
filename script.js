@@ -3,6 +3,7 @@ const offlineBtn = document.querySelector(".offline-btn");
 const onlineBtn = document.querySelector(".online-btn");
 const offlineGrid = document.querySelector(".offline-grid");
 const onlineGrid = document.querySelector(".online-grid");
+const allCells = document.querySelectorAll(".grid-cell");
 
 const months = [
     "January",
@@ -46,7 +47,6 @@ function updateDate() {
         dayLower = day.toLowerCase();
     }
 
-    const allCells = document.querySelectorAll(".grid-cell");
     allCells.forEach((cell) => {
         if (cell.classList.contains(dayLower)) {
             cell.classList.add("active");
