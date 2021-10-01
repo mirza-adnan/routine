@@ -107,7 +107,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--clr-accent);
 }
 
