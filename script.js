@@ -31,19 +31,21 @@ const days = [
 
 function updateDate() {
     const today = new Date();
-    const day = days[today.getDay()];
+    const dayIndex = today.getDay();
+    const day = days[dayIndex];
     const month = months[today.getMonth()];
     const date = String(today.getDate());
     const year = String(today.getFullYear());
     dateDisplay.textContent = `${day}, ${month} ${date}, ${year}`;
 
     const hour = today.getHours();
+    const limit = 12;
     let dayLower;
-    if (hour > 13 && today.getDay() === 4) {
-        dayLower = days[(today.getDay() + 2) % 7].toLowerCase();
-    } else if (hour > 13 || (hour < 13 && today.getDay() === 5)) {
-        dayLower = days[(today.getDay() + 1) % 7].toLowerCase();
-    } else if (hour < 13) {
+    if (hour > limit && dayIndex === 4) {
+        dayLower = days[(dayIndex + 2) % 7].toLowerCase();
+    } else if (hour > limit || (hour < limit && dayIndex === 5)) {
+        dayLower = days[(dayIndex + 1) % 7].toLowerCase();
+    } else if (hour < limit) {
         dayLower = day.toLowerCase();
     }
 
