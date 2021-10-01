@@ -96,7 +96,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .grid-cell.active {
-    color: var(--clr-accent);
+    font-weight: 600;
+    background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.4s ease-out;
+    background-position: -100%;
 }
 
 .head {
