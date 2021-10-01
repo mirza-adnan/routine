@@ -41,9 +41,9 @@ function updateDate() {
     const hour = today.getHours();
     const limit = 12;
     let dayLower;
-    if (hour > limit && dayIndex === 4) {
+    if (hour >= limit && dayIndex === 4) {
         dayLower = days[(dayIndex + 2) % 7].toLowerCase();
-    } else if (hour > limit || (hour < limit && dayIndex === 5)) {
+    } else if (hour >= limit || (hour < limit && dayIndex === 5)) {
         dayLower = days[(dayIndex + 1) % 7].toLowerCase();
     } else if (hour < limit) {
         dayLower = day.toLowerCase();
