@@ -44,7 +44,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo-container {
-    color: var(--clr-accent);
+    background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: -100%;
 }
 
 .main {
@@ -108,7 +113,12 @@ body::-webkit-scrollbar-thumb {
 
 .head {
     font-weight: 600;
-    color: var(--clr-accent);
+    background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: -100%;
 }
 
 .day {
