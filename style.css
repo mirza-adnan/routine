@@ -73,13 +73,17 @@ body::-webkit-scrollbar-thumb {
     padding: 1rem;
     border-radius: 5px;
     font-size: clamp(0.6rem, 2.7vw, 1.2rem);
+    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
+            2,
+            1fr
+        );
 }
 
 .grid.active {
     display: grid;
 }
 
-.offline-grid {
+/* .offline-grid {
     grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
             2,
             1fr
@@ -91,7 +95,7 @@ body::-webkit-scrollbar-thumb {
             3,
             1fr
         );
-}
+} */
 
 .grid-cell {
     justify-self: center;
