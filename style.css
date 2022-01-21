@@ -104,7 +104,18 @@ body::-webkit-scrollbar-thumb {
     padding: 0 0.5rem;
 }
 
-.grid-cell.active {
+.offline-grid .grid-cell.active {
+    font-weight: 600;
+    background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.4s ease-out;
+    background-position: -100%;
+}
+
+.online-grid .day.active {
     font-weight: 600;
     background: linear-gradient(to right, #ccc 50%, #ff5858 50%, #cc2e5d);
     background-size: 200%;
