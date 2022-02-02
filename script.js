@@ -9,6 +9,7 @@ const emptyListItem = document.querySelector(".empty");
 const searchBtn = document.querySelector(".search-btn");
 const modalBg = document.querySelector(".modal-bg");
 const searchBar = document.querySelector(".search-bar");
+const searchPopup = document.querySelector(".search-popup");
 
 const months = [
     "January",
@@ -294,6 +295,9 @@ modalBg.addEventListener("click", (e) => {
 });
 
 searchBar.addEventListener("input", search);
+searchBar.addEventListener("click", () => {
+    searchPopup.scroll(0, 0);
+});
 
 offlineBtn.addEventListener("click", displayOfflineGrid);
 onlineBtn.addEventListener("click", displayOnlineGrid);
