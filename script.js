@@ -295,16 +295,6 @@ modalBg.addEventListener("click", (e) => {
 });
 
 searchBar.addEventListener("input", search);
-searchBar.addEventListener("focus", () => {
-    if (screen.width <= 480) {
-        searchPopup.style.transform = "translateY(10%)";
-    }
-});
-searchBar.addEventListener("focusout", () => {
-    if (screen.width <= 480) {
-        searchPopup.style.transform = "translateY(0%)";
-    }
-});
 
 offlineBtn.addEventListener("click", displayOfflineGrid);
 onlineBtn.addEventListener("click", displayOnlineGrid);
