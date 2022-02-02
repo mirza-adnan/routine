@@ -41,6 +41,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
     align-items: center;
     font-size: clamp(0.7rem, 2.5vw, 1.1rem);
+    position: relative;
 }
 
 .logo-container {
@@ -223,6 +224,111 @@ body::-webkit-scrollbar-thumb {
     color: var(--clr-accent);
 }
 
+.search-btn {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    color: var(--clr-text);
+    cursor: pointer;
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.5rem;
+}
+
+.modal-bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.search-popup {
+    width: 90%;
+    max-width: 550px;
+    height: 700px;
+    background: var(--clr-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.search-bar {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+.teachers-list-container {
+    flex: 1;
+    overflow: auto;
+}
+
+.teachers-list-container::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.teachers-list-container::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+.teachers-list-container::-webkit-scrollbar-thumb {
+    background: var(--clr-accent);
+}
+
+.teachers-list {
+    padding: 1.5rem;
+    list-style: none;
+    height: 100%;
+}
+
+.list-item {
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.list-item:hover {
+    transform: scale(1.05);
+}
+
+.list-link {
+    display: block;
+    text-decoration: none;
+    color: var(--clr-text);
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.list-link span {
+    font-weight: 500;
+}
+
+.empty {
+    height: 1rem;
+}
+
 @keyframes extend {
     0% {
         transform: scale(0);
@@ -254,6 +360,10 @@ body::-webkit-scrollbar-thumb {
 
     :root {
         --line-len: 2px;
+    }
+
+    .teachers-list {
+        padding: 1rem;
     }
 }
 

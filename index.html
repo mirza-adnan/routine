@@ -13,9 +13,34 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
 
     <body>
+        <div class="modal-bg">
+            <div class="search-popup">
+                <div class="search-bar-container">
+                    <input
+                        autocomplete="off"
+                        type="text"
+                        name="name"
+                        class="search-bar"
+                        placeholder="Search for a teacher..."
+                    />
+                </div>
+                <div class="teachers-list-container">
+                    <ul class="teachers-list">
+                        <li class="empty"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <header class="header">
             <div class="logo-container">
                 <h1 class="logo">Class Routine<br />XII-Sci-B</h1>
@@ -23,6 +48,7 @@
             <div class="date-container">
                 <h2 class="date"></h2>
             </div>
+            <button class="search-btn"><i class="fas fa-search"></i></button>
         </header>
         <main class="main">
             <div class="buttons">
@@ -207,6 +233,15 @@
                 </div>
             </div>
         </main>
+        <template>
+            <li class="list-item">
+                <a
+                    href="https://us04web.zoom.us/j/4078407985?pwd=T2R1Um5Tb3VhQnhVNUg0M0NqakVLQT09"
+                    class="list-link"
+                    >TU<br /><span>Physics</span></a
+                >
+            </li>
+        </template>
         <script src="./script.js"></script>
     </body>
 </html>
