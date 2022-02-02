@@ -21,6 +21,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--clr-bg);
     color: var(--clr-text);
+    position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -256,19 +257,6 @@ body::-webkit-scrollbar-thumb {
     background: var(--clr-bg);
     display: flex;
     flex-direction: column;
-    overflow: auto;
-}
-
-.search-popup::-webkit-scrollbar {
-    width: 0.2rem;
-}
-
-.search-popup::-webkit-scrollbar-track {
-    background: #1e1e24;
-}
-
-.search-popup::-webkit-scrollbar-thumb {
-    background: var(--clr-accent);
 }
 
 .search-bar-container {
@@ -291,6 +279,19 @@ body::-webkit-scrollbar-thumb {
 
 .teachers-list-container {
     flex: 1;
+    overflow: auto;
+}
+
+.teachers-list-container::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.teachers-list-container::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+.teachers-list-container::-webkit-scrollbar-thumb {
+    background: var(--clr-accent);
 }
 
 .teachers-list {
