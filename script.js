@@ -251,6 +251,7 @@ function loadSearchOptions() {
         const hyperlink = document.createElement("a");
         hyperlink.href = teacher.link;
         hyperlink.classList.add("list-link");
+        hyperlink.target = "_blank";
         hyperlink.textContent = teacher.name;
         hyperlink.appendChild(document.createElement("br"));
 
