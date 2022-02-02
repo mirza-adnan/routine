@@ -295,6 +295,12 @@ modalBg.addEventListener("click", (e) => {
     }
 });
 
+window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        hideModal();
+    }
+});
+
 searchBar.addEventListener("input", search);
 
 offlineBtn.addEventListener("click", displayOfflineGrid);
