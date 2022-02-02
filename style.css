@@ -240,7 +240,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal-bg {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
