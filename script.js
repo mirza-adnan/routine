@@ -296,12 +296,12 @@ modalBg.addEventListener("click", (e) => {
 
 searchBar.addEventListener("input", search);
 searchBar.addEventListener("focus", () => {
-    if (screen.height <= 480) {
+    if (screen.width <= 480) {
         searchPopup.style.transform = "translateY(10%)";
     }
 });
 searchBar.addEventListener("focusout", () => {
-    if (screen.height <= 480) {
+    if (screen.width <= 480) {
         searchPopup.style.transform = "translateY(0%)";
     }
 });
