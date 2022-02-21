@@ -10,6 +10,7 @@ const searchBtn = document.querySelector(".search-btn");
 const modalBg = document.querySelector(".modal-bg");
 const searchBar = document.querySelector(".search-bar");
 const searchPopup = document.querySelector(".search-popup");
+const popupCloseBtn = document.querySelector(".popup-close-btn");
 
 const months = [
     "January",
@@ -234,10 +235,6 @@ function showModal() {
     modalBg.style.display = "flex";
 }
 
-function hideModal() {
-    modalBg.style.display = "none";
-}
-
 function loadSearchOptions() {
     teachersSorted.forEach((teacher) => {
         const li = document.createElement("li");
@@ -286,12 +283,16 @@ function showAllTeachers() {
     });
 }
 
+function hideModal() {
+    modalBg.style.display = "none";
+    searchBar.value = "";
+    showAllTeachers();
+}
+
 searchBtn.addEventListener("click", showModal);
 modalBg.addEventListener("click", (e) => {
     if (e.target.classList.contains("modal-bg")) {
-        searchBar.value = "";
         hideModal();
-        showAllTeachers();
     }
 });
 
@@ -305,6 +306,8 @@ searchBar.addEventListener("input", search);
 
 offlineBtn.addEventListener("click", displayOfflineGrid);
 onlineBtn.addEventListener("click", displayOnlineGrid);
+
+popupCloseBtn.addEventListener("click", hideModal);
 
 loadSearchOptions();
 updateDate();

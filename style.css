@@ -75,29 +75,24 @@ body::-webkit-scrollbar-thumb {
     padding: 1rem;
     border-radius: 5px;
     font-size: clamp(0.6rem, 2.7vw, 1.2rem);
-    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
-            2,
-            1fr
-        );
 }
 
 .grid.active {
     display: grid;
 }
 
-/* .offline-grid {
+.offline-grid {
+    grid-template-columns:
+        1fr var(--line-len) 1fr 1fr var(--line-len) 1fr var(--line-len)
+        1fr 1fr;
+}
+
+.online-grid {
     grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
             2,
             1fr
         );
 }
-
-.online-grid {
-    grid-template-columns: 1fr var(--line-len) 1fr var(--line-len) repeat(
-            3,
-            1fr
-        );
-} */
 
 .grid-cell {
     justify-self: center;
@@ -180,15 +175,30 @@ body::-webkit-scrollbar-thumb {
     grid-column: 2 / 3;
 }
 
-.line-2 {
+.online-grid .line-2 {
     grid-column: 4 / 5;
+}
+
+.offline-grid .line-2 {
+    grid-column: 5 / 6;
+}
+
+.line-3 {
+    grid-column: 7 / 8;
 }
 
 .fc {
     grid-row: 3 / -1;
-    grid-column: 3 / 4;
     font-size: clamp(0.8rem, 2.7vw, 1.4rem);
     font-weight: 500;
+}
+
+.online-grid .fc {
+    grid-column: 3 / 4;
+}
+
+.offline-grid .fc {
+    grid-column: 6 / 7;
 }
 
 .buttons {
@@ -257,6 +267,20 @@ body::-webkit-scrollbar-thumb {
     background: var(--clr-bg);
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.popup-close-btn {
+    outline: none;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    background: none;
+    color: var(--clr-text);
+    cursor: pointer;
+    transform: rotate(45deg);
+    right: 10px;
+    top: 2px;
 }
 
 .search-bar-container {

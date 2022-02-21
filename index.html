@@ -25,6 +25,7 @@
     <body>
         <div class="modal-bg">
             <div class="search-popup">
+                <button class="popup-close-btn">+</button>
                 <div class="search-bar-container">
                     <input
                         autocomplete="off"
@@ -52,47 +53,62 @@
         </header>
         <main class="main">
             <div class="buttons">
-                <button class="btn offline-btn">Offline</button>
+                <button class="btn offline-btn active">Offline</button>
 
-                <button class="btn online-btn active">Online</button>
+                <button class="btn online-btn">Online</button>
             </div>
-            <div class="grid offline-grid">
+            <div class="grid offline-grid active">
                 <!--Row-->
                 <div class="grid-cell head">Day/Period</div>
                 <div class="line line-vertical line-1"></div>
-                <div class="grid-cell head">FC</div>
+                <div class="grid-cell head">1st</div>
+                <div class="grid-cell head">2nd</div>
                 <div class="line line-vertical line-2"></div>
-                <div class="grid-cell head">1st Period</div>
-                <div class="grid-cell head">2nd Period</div>
+                <div class="grid-cell head">FC</div>
+                <div class="line line-vertical line-3"></div>
+                <div class="grid-cell head">3rd</div>
+                <div class="grid-cell head">4th</div>
                 <!--Row-->
                 <div class="line line-horizontal"></div>
                 <!--Row-->
-                <div class="grid-cell day saturday">Saturday</div>
+                <div class="grid-cell day saturday">Sat</div>
+                <div class="grid-cell saturday">Phy<br />NC</div>
+                <div class="grid-cell saturday">Stats-P<br />YK</div>
                 <div class="grid-cell fc">Form<br />Class</div>
-                <div class="grid-cell saturday">Bangla<br />MHA</div>
-                <div class="grid-cell saturday">Physics<br />TU</div>
+                <div class="grid-cell saturday">Eng<br />MHB</div>
+                <div class="grid-cell saturday">H.M<br />AA</div>
                 <!--Row-->
-                <div class="grid-cell day sunday">Sunday</div>
-                <div class="grid-cell sunday">Physics<br />TU</div>
-                <div class="grid-cell sunday">Chemistry<br />GCS</div>
+                <div class="grid-cell day sunday">Sun</div>
+                <div class="grid-cell sunday">Chem<br />GCS</div>
+                <div class="grid-cell sunday">Stats<br />YK</div>
+                <div class="grid-cell sunday">Eng<br />MHB</div>
+                <div class="grid-cell sunday">ICT<br />RAI</div>
                 <!--Row-->
-                <div class="grid-cell day monday">Monday</div>
-                <div class="grid-cell monday">H.Maths<br />LYM</div>
-                <div class="grid-cell monday">Bangla<br />MHA</div>
+                <div class="grid-cell day monday">Mon</div>
+                <div class="grid-cell monday">Phy<br />TU</div>
+                <div class="grid-cell monday">Stats<br />YK</div>
+                <div class="grid-cell monday">Bang<br />MS</div>
+                <div class="grid-cell monday">Phy-P<br />TU</div>
                 <!--Row-->
-                <div class="grid-cell day tuesday">Tuesday</div>
-                <div class="grid-cell tuesday">H.Maths<br />AA</div>
-                <div class="grid-cell tuesday">English<br />FR</div>
+                <div class="grid-cell day tuesday">Tue</div>
+                <div class="grid-cell tuesday">ICT<br />RAI</div>
+                <div class="grid-cell tuesday">Bang<br />MS</div>
+                <div class="grid-cell tuesday">H.M<br />LYM</div>
+                <div class="grid-cell tuesday">Chem<br />MZI</div>
                 <!--Row-->
-                <div class="grid-cell day wednesday">Wednesday</div>
-                <div class="grid-cell wednesday">Statistics<br />YK</div>
-                <div class="grid-cell wednesday">ICT<br />RAI</div>
+                <div class="grid-cell day wednesday">Wed</div>
+                <div class="grid-cell wednesday">H.M<br />AA</div>
+                <div class="grid-cell wednesday">Chem-P<br />MRN</div>
+                <div class="grid-cell wednesday">Bang<br />MHA</div>
+                <div class="grid-cell wednesday">Eng<br />FRN</div>
                 <!--Row-->
-                <div class="grid-cell day thursday">Thursday</div>
-                <div class="grid-cell thursday">Statistics<br />YK</div>
-                <div class="grid-cell thursday">Chemistry<br />MRN</div>
+                <div class="grid-cell day thursday">Thur</div>
+                <div class="grid-cell thursday">Chem<br />MRN</div>
+                <div class="grid-cell thursday">Stats<br />YK</div>
+                <div class="grid-cell thursday">H.M-P<br />LYM</div>
+                <div class="grid-cell thursday">Phy<br />TU</div>
             </div>
-            <div class="grid online-grid active">
+            <div class="grid online-grid">
                 <!--Row-->
                 <div class="grid-cell head">Day/Time</div>
                 <div class="line line-vertical line-1"></div>
