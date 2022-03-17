@@ -74,7 +74,7 @@ body::-webkit-scrollbar-thumb {
     box-shadow: rgb(0 0 0 / 20%) 0px 4px 15px 0px;
     padding: 1rem;
     border-radius: 5px;
-    font-size: clamp(0.6rem, 2.7vw, 1.2rem);
+    font-size: clamp(1rem, 2.7vw, 1.2rem);
 }
 
 .grid.active {
@@ -82,9 +82,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .offline-grid {
-    grid-template-columns:
-        1fr var(--line-len) 1fr 1fr var(--line-len) 1fr var(--line-len)
-        1fr 1fr;
+    grid-template-columns: 1fr var(--line-len) repeat(6, 1fr);
 }
 
 .online-grid {
@@ -191,6 +189,10 @@ body::-webkit-scrollbar-thumb {
     grid-row: 3 / -1;
     font-size: clamp(0.8rem, 2.7vw, 1.4rem);
     font-weight: 500;
+}
+
+.span-2 {
+    grid-column: span 2;
 }
 
 .online-grid .fc {
