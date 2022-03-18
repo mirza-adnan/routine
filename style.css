@@ -4,6 +4,7 @@
     --clr-accent: #fc6e83;
     --clr-sub: #fcd783;
     --line-len: 3px;
+    --row-height: 95px;
 }
 
 * {
@@ -60,21 +61,26 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     overflow: auto;
+    padding: 0 0.5rem;
 }
 
 .grid {
-    width: 95%;
+    width: 100%;
     max-width: 1000px;
-    min-width: 342px;
     margin: 1rem 0;
     display: none;
-    grid-template-rows: 95px var(--line-len) repeat(6, 95px);
+    grid-template-rows: var(--row-height) var(--line-len) repeat(
+            6,
+            var(--row-height)
+        );
     opacity: 0;
     animation: fade-in 1s ease-in forwards;
     box-shadow: rgb(0 0 0 / 20%) 0px 4px 15px 0px;
     padding: 1rem;
     border-radius: 5px;
-    font-size: clamp(1rem, 2.7vw, 1.2rem);
+    font-size: clamp(0.6rem, 2.7vw, 1.2rem);
+    flex: 1;
+    font-weight: 300;
 }
 
 .grid.active {
@@ -396,12 +402,12 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 540px) {
     .grid {
-        grid-template-rows: 70px var(--line-len) repeat(6, 70px);
-        padding: 0.5rem;
+        padding: 0.4rem;
     }
 
     :root {
         --line-len: 1px;
+        --row-height: 70px;
     }
 
     .header {
@@ -410,5 +416,9 @@ body::-webkit-scrollbar-thumb {
 
     .link:active {
         background-position: -100%;
+    }
+
+    .grid {
+        width: auto;
     }
 }
